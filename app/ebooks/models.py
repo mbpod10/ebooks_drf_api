@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MaxLengthValidator, MinLengthValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Ebook(models.Model):
@@ -19,7 +19,7 @@ class Review(models.Model):
     review_author = models.CharField(max_length=8, blank=True, null=True)
     review = models.TextField(blank=True)
     rating = models.PositiveIntegerField(
-        validators=[MinLengthValidator(1), MaxLengthValidator(5)])
+        validators=[MinValueValidator(1), MaxValueValidator(5)])
     ebook = models.ForeignKey(
         Ebook, on_delete=models.CASCADE, related_name='reviews')
 
