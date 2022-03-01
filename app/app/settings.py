@@ -124,9 +124,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.IsAuthenticated',
-#         # 'rest_framework.permissions.IsAdminUser',
-#         # 'rest_framework.permissions.AllowAny',
-#     ]
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 3
 # }
